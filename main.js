@@ -20,7 +20,7 @@ class frog{
     draw(context,img){
         // context.fillStyle ="#f505c9"
         // context.fillRect(this.xpos, this.ypos, this.height, this.width);
-        context.clearRect(this.xpos-60,this.ypos-60,200,100)
+        
         context.drawImage(img, this.xpos-35,this.ypos-30);
     }
     jump(left){
@@ -94,7 +94,7 @@ class rect{
     
 }
 
-const sentence = "This game is still in development mode.The ending of the game is not decided yet.please email me a review of this game."
+const sentence = "This game is still in development mode. The ending of the game is not decided yet. please email me a review of this game."
 const words = sentence.split(" ")
 const word = "sssss"
 let n = 0
@@ -163,6 +163,9 @@ for (var i = 0; i < words.length; i++) {
                 
                 img.src ="./sit.gif"
             }
+            // context.fillRect(toad.xpos-100, toad.ypos-30, 500, 100)
+            context.clearRect(toad.xpos-100, toad.ypos-30, 500, 100)
+            rects.forEach((lily)=>{lily.update()})
             toad.draw(context,img)
             letter_rects[currentkey_index].changecolor("#1122ff")
         }
